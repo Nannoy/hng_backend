@@ -12,6 +12,7 @@ class ResponseController extends Controller
     public function response(Request $request)
     {
         $visitor_name = $request->query('visitor_name', 'Guest');
+        //$client_ip = '102.89.22.254';
         $client_ip = $request->ip();
         
         $location = $this->getLocationFromIp($client_ip);
